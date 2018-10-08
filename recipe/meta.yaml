@@ -22,13 +22,13 @@ requirements:
     - setuptools
     - numpy >=1.9
     - scipy
-    - scikit-learn 0.19.*
+    - scikit-learn >= 0.19.*
 
   run:
     - python
     - numpy >=1.9
     - scipy
-    - scikit-learn 0.19.*
+    - scikit-learn >= 0.19.*
 
 test:
   imports:
