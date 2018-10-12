@@ -1,6 +1,6 @@
 {% set name = "imbalanced-learn" %}
-{% set version = "0.3.3" %}
-{% set sha256 = "e49550da4c98771afd0aa49db7710ab0d85e766754bad9fb767567c367d2b2e4" %}
+{% set version = "0.4.1" %}
+{% set sha256 = "80a7dbf5986b7d69162ef319ead016d566bd70cb38881a6fb29bc9b1311d47e0" %}
 
 package:
   name: {{ name|lower }}
@@ -13,22 +13,19 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools
-    - numpy >=1.9
-    - scipy
-    - scikit-learn >=0.19
 
   run:
     - python
     - numpy >=1.9
     - scipy
-    - scikit-learn >=0.19
+    - scikit-learn >=0.20
 
 test:
   imports:
@@ -45,7 +42,7 @@ about:
     techniques commonly used in datasets showing strong between-class imbalance.
     It is compatible with scikit-learn and is part of scikit-learn-contrib
     projects.
-  doc_url: http://contrib.scikit-learn.org/imbalanced-learn
+  doc_url: http://imbalanced-learn.org/en/stable/
   dev_url: https://github.com/scikit-learn-contrib/imbalanced-learn
 
 extra:
