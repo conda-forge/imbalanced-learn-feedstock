@@ -23,7 +23,7 @@ requirements:
     - pip
 
   run:
-    - python
+    - python >=3
     - numpy >=1.11
     - scipy
     - joblib >=0.11
