@@ -23,9 +23,9 @@ requirements:
 
   run:
     - python
-    - numpy >=1.9
+    - numpy >=1.11
     - scipy
-    - scikit-learn >=0.20
+    - scikit-learn >=0.22
 
 test:
   imports:
