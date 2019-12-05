@@ -1,6 +1,6 @@
 {% set name = "imbalanced-learn" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "5df760537886678ef9e25f5bad96d194c5fc66f62de84488069acf5d4b0119d5" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "51e0b92405045a2fcdd2e2c3e1b1f66b1e0e2606b0fe27da7e4bed36c0a7757d" %}
 
 package:
   name: {{ name|lower }}
@@ -14,18 +14,22 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
-    - python
+    - python >=3
     - setuptools
-
+    - pip
+  host:
+    - python >=3
+    - pip
   run:
-    - python
-    - numpy >=1.9
+    - python >=3
+    - numpy >=1.11
     - scipy
-    - scikit-learn >=0.20
+    - scikit-learn >=0.22
+    - joblib >=0.11
 
 test:
   imports:
