@@ -5,9 +5,13 @@ Home: https://github.com/scikit-learn-contrib/imbalanced-learn
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/imbalanced-learn-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python module to balance data set using under- and over-sampling
+
+Development: https://github.com/scikit-learn-contrib/imbalanced-learn
+
+Documentation: http://imbalanced-learn.org/en/stable/
 
 imbalanced-learn is a python package offering a number of re-sampling
 techniques commonly used in datasets showing strong between-class imbalance.
