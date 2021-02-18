@@ -1,6 +1,6 @@
 {% set name = "imbalanced-learn" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "da59de0d1c0fa66f62054dd9a0a295a182563aa1abbb3bf9224a3678fcfe8fa4" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "1c04d203575088af5814511b6238b38e7523370cc188770b7a25418d09cf3d29" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -28,12 +28,17 @@ requirements:
     - python >=3
     - numpy >=1.13.3
     - scipy >=0.19.1
-    - scikit-learn >=0.23
+    - scikit-learn >=0.24
     - joblib >=0.11
 
 test:
+  requires:
+    - pytest >=3.3.0
+    - pytest-timeout
   imports:
     - imblearn
+  commands:
+    - pytest --timeout 300 --verbose --pyargs imblearn
 
 about:
   home: https://github.com/scikit-learn-contrib/imbalanced-learn
