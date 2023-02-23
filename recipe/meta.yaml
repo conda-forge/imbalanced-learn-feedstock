@@ -36,6 +36,7 @@ test:
   imports:
     - imblearn
   commands:
+    - pip check
     - pytest --timeout 300 --verbose --pyargs imblearn
 
 about:
@@ -49,7 +50,7 @@ about:
     techniques commonly used in datasets showing strong between-class imbalance.
     It is compatible with scikit-learn and is part of scikit-learn-contrib
     projects.
-  doc_url: http://imbalanced-learn.org/en/stable/
+  doc_url: https://imbalanced-learn.org/en/stable/
   dev_url: https://github.com/scikit-learn-contrib/imbalanced-learn
 
 extra:
