@@ -1,6 +1,6 @@
 {% set name = "imbalanced-learn" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "836a4c137cc3c10310d4f6cd5ec34600ff488d7f8c243a997c3f9b551c91d0b2" %}
+{% set version = "0.10.1" %}
+{% set sha256 = "bc7609619ec3c38c442292928239ad3d10b5deb0af8a29c83822b7b57b319f8b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,32 +12,32 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: True  # [py<38]
 
 requirements:
-  build:
-    - python >=3
+  host:
+    - python
     - setuptools
     - pip
-  host:
-    - python >=3
-    - pip
+    - wheel
   run:
-    - python >=3
-    - numpy >=1.14.6
-    - scipy >=1.1.0
-    - scikit-learn >=1.0.1
-    - joblib >=0.11
+    - python
+    - numpy
+    - scipy >=1.3.2
+    - scikit-learn >=1.0.2
+    - joblib >=1.1.1
 
 test:
   requires:
-    - pytest >=3.3.0
+    - pip
+    - pytest >=5.0.1
     - pytest-timeout
   imports:
     - imblearn
   commands:
+    - pip check
     - pytest --timeout 300 --verbose --pyargs imblearn
 
 about:
@@ -51,7 +51,7 @@ about:
     techniques commonly used in datasets showing strong between-class imbalance.
     It is compatible with scikit-learn and is part of scikit-learn-contrib
     projects.
-  doc_url: http://imbalanced-learn.org/en/stable/
+  doc_url: https://imbalanced-learn.org/stable/
   dev_url: https://github.com/scikit-learn-contrib/imbalanced-learn
 
 extra:
