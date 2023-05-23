@@ -30,6 +30,7 @@ requirements:
     - joblib >=1.1.1
   run_constrained:
     - threadpoolctl >=2.0.0
+    - intel-openmp <2023.1.0  # [osx and x86_64]
 
 test:
   requires:
