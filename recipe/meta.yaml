@@ -1,6 +1,6 @@
 {% set name = "imbalanced-learn" %}
-{% set version = "0.10.1" %}
-{% set sha256 = "bc7609619ec3c38c442292928239ad3d10b5deb0af8a29c83822b7b57b319f8b" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "7582ae8858e6db0b92fef97dd08660a18297ee128d78c2abdc006b8bd86b8fdc" %}
 
 package:
   name: {{ name|lower }}
@@ -27,7 +27,7 @@ requirements:
   run:
     - python >=3
     - numpy >=1.17.3
-    - scipy >=1.3.2
+    - scipy >=1.5.0
     - scikit-learn >=1.0.2
     - joblib >=1.1.0
 
