@@ -1,6 +1,6 @@
 {% set name = "imbalanced-learn" %}
-{% set version = "0.12.1" %}
-{% set sha256 = "30cabc00d9209398bc28c17c3a1a7fd2af0cd21d24ae727e5882db2c3f8a3cbc" %}
+{% set version = "0.12.2" %}
+{% set sha256 = "a80c56cedcb07124f266be62d3a5d2ab5b5779909a7343fdf1b993479662f6c1" %}
 
 package:
   name: {{ name|lower }}
